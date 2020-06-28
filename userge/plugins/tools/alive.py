@@ -28,16 +28,15 @@ async def alive(message: Message):
         await refresh_id()
         await sendit(LOGO_STICKER_ID, message)
     output = f"""
-**USERGE is Up and Running**
+**Sur IDK how :p but i'm Alive**
 
-       __Durable as a Serge__
+       __Sur i'm a vary smart bot__
 
-• **python version** : `{versions.__python_version__}`
-• **pyrogram version** : `{versions.__pyro_version__}`
-• **userge version** : `{get_version()}`
-• **license** : {versions.__license__}
-• **copyright** : {versions.__copyright__}
-• **repo** : [Userge]({Config.UPSTREAM_REPO})
+• 🐍** Python** : `v{versions.__python_version__}`
+• 🤖** Pyrogram** : `v{versions.__pyro_version__}`
+• 🧬** Userge** : `v{get_version()}`
+• 🌟** Repo** : [Userge-X]({Config.UPSTREAM_REPO})
+• 📑** License** : {versions.__license__}
 """
     await userge.send_message(message.chat.id, output, disable_web_page_preview=True)
 
