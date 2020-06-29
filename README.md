@@ -92,8 +92,8 @@ async def testing(message: Message):
   > After that copy the string session and past it in Config Vars (settings -> reveal config vars). 
 
   > Finally turn on the app and check the logs (settings -> view logs) :)
-
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/UsergeTeam/Userge/tree/master)
+<br>
+  <a href = "https://heroku.com/deploy?template=https://github.com/code-rgb/Userge/tree/master"><img src="https://telegra.ph/file/57c4edb389224c9cf9996.png" alt="Press to Takeoff" width="570px"></a>
 
 * **Other Method** 🔧
 
