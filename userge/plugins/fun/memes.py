@@ -11,6 +11,7 @@
 import os
 import time
 import asyncio
+from asyncio import sleep
 from re import sub
 from collections import deque
 from random import choice, getrandbits, randint
@@ -553,6 +554,21 @@ async def dice_gen(message: Message):
     random_emo = choice(DICE_EMO)
     await userge.send_dice(message.chat.id, random_emo)
     await message.delete()
+                       
+@userge.on_cmd("emoji$", about={
+'header': "Multiple Animated Emojis"})
+
+async def emoji_func(message):
+
+    switch = await message.edit_text("🤔")
+    userge = "😆 😂 😳 😒 🧐 🤔 😍 😘 🥰 🥳 😌 😮 🙄 😐 😧 😔 😢 😡 😨 🎃 🤕 🤒 😷 🤧 🤢 🤮 👍 💝 ❤ 💋 😻 🎉 🎄 👛 💎 🙈 ☃ 📁 👻 💀 🦠 🚑"
+
+    for emoji in userge:
+    	try:
+    		await switch.edit(emoji)
+    		await sleep(2)
+    	except:
+    			pass
 
 
 THROW = ("throws", "flings", "chucks", "hurls")
