@@ -7,14 +7,14 @@ from userge import userge, Message
 
 @userge.on_cmd("waifu", about={
 'header': "Let your waifu say it for you UwU.",
-'usage': "waifu <text>"})
+'usage': "{tr}waifu [text or reply to msg]"})
 
 async def waifu(message: Message):
     """ Creates random anime sticker! """
 
     text = message.input_or_reply_str
     if not text:
-    	await message.edit("```Ur ( ͡U ω ͡U ) Waifu is on the way...```")
+    	await message.edit("```You didn't gave the text so your Waifu ( ͡U ω ͡U ) ran away...```")
     	return
     animus = [20, 32, 33, 40, 41, 42, 58]
     sticcers = await userge.get_inline_bot_results(
