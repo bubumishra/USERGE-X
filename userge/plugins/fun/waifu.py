@@ -6,7 +6,7 @@ from userge import userge, Message
     'header': "Say it with cute anime girl sticker",
     'usage': "{tr}waifu [text | reply to message]",
     'example': "{tr}waifu Onii-chan"})
-async def anisti(message: Message):
+async def waifu(message: Message):
     """ Creates random anime girl sticker! """
 
     text = message.input_or_reply_str
