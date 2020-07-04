@@ -7,10 +7,9 @@ import math
 async def progresss(message):
     x = datetime.datetime.now()
     day = int(x.strftime("%j"))
-    def truncate(number, digits) -> float:
-        stepper = 10.0 ** digits
-        return math.trunc(stepper * number) / stepper
-    percent = truncate(( day / 365 * 100 ), 0)
+    
+    percent = math.trunc( day / 366 * 100 )
+    #366 days cuz leap year xD
     num = round(percent/5)
     
     progress = [
