@@ -33,6 +33,7 @@
 * [Telegram-Paperplane](https://github.com/RaphielGang/Telegram-Paperplane)
 * [UniBorg](https://github.com/SpEcHiDe/UniBorg)
 
+
 > Special Thanks to all of you !!!.
 
 ## Features 😍
@@ -122,6 +123,9 @@ async def testing(message: Message):
 * **[More Detailed Guide](https://docs.google.com/document/d/15uoiOn2NkN518MMkx9h5UaMEWMp8aNZqJocXvS0uI6E)** 📝
 
 > TODO: add Docker Support.
+
+### Guide to Upstream Forked Repo
+* [Upstream Forked Repo](https://telegra.ph/Upstream-Userge-Forked-Repo-Guide-07-04)
 
 ### Video Tutorial 🎥
 
