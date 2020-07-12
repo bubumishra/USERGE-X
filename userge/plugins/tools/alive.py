@@ -22,7 +22,7 @@ async def alive(message: Message):
     output = f"""
 ****USERGE-X is Up and Running****
 
-• 🕔**Uptime** : `{userge.uptime}`
+• 🕔** Uptime** : `{userge.uptime}`
 • 🐍** Python** : `v{versions.__python_version__}`
 • 🤖** Pyrogram** : `v{versions.__pyro_version__}`
 • 🧬** Userge** : `v{get_version()}`
