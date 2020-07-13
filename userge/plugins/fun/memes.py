@@ -595,9 +595,32 @@ async def bigf_func(message):
     for i in range(18):
         await asyncio.sleep(0.3)
         await message.edit(animation_chars[i % 9])
-
-
+               
                        
+@userge.on_cmd("luvstory$", about={'header': "Get ready to witness a true love story that proves that love is the strongest force on Earth."})
+async def luv_story(message):
+    await message.edit("Starting asf")
+    animation_chars = [
+            "1 ❤️ love story",
+            "  😐             😕 \n/👕\         <👗\ \n 👖               /|",    
+            "  😉          😳 \n/👕\       /👗\ \n  👖            /|",
+            "  😚            😒 \n/👕\         <👗> \n  👖             /|",
+            "  😍         ☺️ \n/👕\      /👗\ \n  👖          /|",
+            "  😍           😍 \n/👕\       /👗\ \n  👖           /|",
+            "  😘     😊 \n /👕\/👗\ \n   👖   /|",
+            " 😳  😁 \n /|\ /👙\ \n /\     / |",    
+            "😈    /😰\ \n<|\      👙 \n /🍆    / |",
+            "😅 \n/(),✊😮 \n /\         _/\\/|",
+            "😎 \n/\\_,__😫 \n  //    //       \\",
+            "😖 \n/\\_,💦_😋  \n  //         //        \\",
+            "  😭      ☺️ \n  /|\   /(👶)\ \n  /!\      / \ ",
+            "The End 😂..."
+    ]
+    for i in range(0, 14):
+       await asyncio.sleep(2.7)
+       await message.edit(animation_chars[i % 14])                  
+
+
 THROW = ("throws", "flings", "chucks", "hurls")
 
 HIT = ("hits", "whacks", "slaps", "smacks", "bashes")
