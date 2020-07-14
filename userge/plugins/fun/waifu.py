@@ -5,11 +5,6 @@ from userge import userge, Message
 import re
 from re import sub
 
-@userge.on_cmd("waifu", about={
-    'header': "Say it with cute anime girl sticker",
-    'usage': "{tr}waifu [text | reply to message]",
-    'example': "{tr}waifu Onii-chan"})
-
 EMOJI_PATTERN = re.compile(
     "["
     "\U0001F1E0-\U0001F1FF"  # flags (iOS)
@@ -29,6 +24,11 @@ EMOJI_PATTERN = re.compile(
 def deEmojify(inputString: str) -> str:
     """Remove emojis and other non-safe characters from string"""
     return re.sub(EMOJI_PATTERN, '', inputString)
+
+@userge.on_cmd("waifu", about={
+    'header': "Say it with cute anime girl sticker",
+    'usage': "{tr}waifu [text | reply to message]",
+    'example': "{tr}waifu Onii-chan"})
 
 async def waifu(message: Message):
     """ Creates random anime girl sticker! """
