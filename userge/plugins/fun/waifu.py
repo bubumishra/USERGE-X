@@ -41,7 +41,7 @@ async def waifu(message: Message):
         animus = [20, 32, 33, 40, 41, 42, 58]
         stickers = await userge.get_inline_bot_results(
             "stickerizerbot",
-            f"#{random.choice(animus)}{(deEmojify(text))}"
+            f"#{random.choice(animus)}{deEmojify(text)}"
         )
         await userge.send_inline_bot_result(
             chat_id=message.chat.id,
