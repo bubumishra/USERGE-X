@@ -62,11 +62,15 @@ async def formatJSON(outData):
         return msg
     else:
         jsonData = jsonData['data']['Media']
-        
-        title = f"<b>{jsonData['title']['romaji']}</b>"
-        title += f" ({jsonData['title']['native']})"
+        if f"{jsonData['bannerImage']}" == "None":
+           title = "[•]"
+        else:
+           title = f"[•]({jsonData['bannerImage']})"
+        title += f" <b>{jsonData['title']['romaji']}"
+        title += f" ({jsonData['title']['native']})</b>"
         link = f"https://anilist.co/anime/{jsonData['id']}"
-        msg += f"{title}"
+
+        msg += f"[{title}]({link})"
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
         if f"{jsonData['isAdult']}" == "True":
            msg += "\n**Rating** : <code>Rx - 18+</code>"
@@ -84,16 +88,15 @@ async def formatJSON(outData):
         Banner = f"[Banner]({jsonData['bannerImage']})"
         Cover = f"[Cover]({jsonData['coverImage']['extraLarge']})"
         if f"{jsonData['coverImage']['extraLarge']}" != "None" and f"{jsonData['bannerImage']}" != "None":
-             images = f"\n**Image** : {Banner}, {Cover}"
+             images = f"\n📷 : {Banner}, {Cover}"
         elif f"{jsonData['coverImage']['extraLarge']}" == "None" and f"{jsonData['bannerImage']}" != "None":   
-             images = f"\n**Image** : {Banner}"
+             images = f"\n📷 : {Banner}"
         elif f"{jsonData['coverImage']['extraLarge']}" != "None" and f"{jsonData['bannerImage']}" == "None":
-             images = f"\n**Image** : {Cover}"
+             images = f"\n📷 : {Cover}"
         else:
              images = ""
         msg += images 
-        more = f"<b>[[Read More]]({link})</b>"     
-        msg += f"\n\n {jsonData['description']} {more}"
+        msg += f"\n\n {jsonData['description']}"
         
         return msg
 
