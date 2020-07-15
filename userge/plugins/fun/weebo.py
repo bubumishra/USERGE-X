@@ -158,7 +158,7 @@ async def achar_(message: Message):
         try:
             res = jikan.character(search)
         except APIException:
-            message.edit("Error connecting to the API. Please try again!")
+            await message.edit("Error connecting to the API. Please try again!")
             return ""
     if res:
         name = res.get("name")
@@ -197,7 +197,7 @@ async def manga_(message: Message):
         try:
             manga = jikan.manga(res)
         except APIException:
-            message.edit("Error connecting to the API. Please try again!")
+            await message.edit("Error connecting to the API. Please try again!")
             return ""
         title = manga.get("title")
         japanese = manga.get("title_japanese")
