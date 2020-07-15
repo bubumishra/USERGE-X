@@ -64,8 +64,8 @@ async def formatJSON(outData):
     else:
         jsonData = jsonData['data']['Media']
         
-        title = f"<b>{jsonData['title']['romaji']}"
-        title += f" ({jsonData['title']['native']})</b>"
+        title = f"<b>{jsonData['title']['romaji']}</b>"
+        title += f" ({jsonData['title']['native']})"
         link = f"https://anilist.co/anime/{jsonData['id']}"
         msg += f"{title}"
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
@@ -79,7 +79,7 @@ async def formatJSON(outData):
         else: 
            msg += f"\n**Status** : <code>{jsonData['status']}</code>"
         msg += f"\n**Episode** : <code>{jsonData['episodes']}</code>"
-        msg += f"\n**Premiered :** : <code>{jsonData['season']} {jsonData['startDate']['year']}</code>"
+        msg += f"\n**Premiered ** : <code>{jsonData['season']} {jsonData['startDate']['year']}</code>"
         msg += f"\n**Score** : <code>{jsonData['averageScore']}%</code>"
         msg += f"\n**Duration** : <code>{jsonData['duration']} min</code>"
         Banner = f"[Banner]({jsonData['bannerImage']})"
