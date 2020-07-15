@@ -108,11 +108,11 @@ def replace_text(text):
     'example': "{tr}anime Dragon Ball"})
 
 async def anime_(message: Message):
-    #""" Creates random anime girl sticker! """
+    """ Search anime """
 
     query = message.input_or_reply_str
     if not query:
-        await message.edit("```You didn't gave the text are you even an Otaku?```", del_in=3)
+        await message.edit("```Give me text to search Anime```", del_in=3)
         return
 
     result = await anime_call_api(query)
@@ -141,10 +141,10 @@ async def bigf_func(message):
     'example': "{tr}char Dragon Ball"})
 
 async def achar_(message: Message):
-    #""" Creates random anime girl sticker! """
+    """ Search Anime Characters """
     query = message.input_or_reply_str
     if not query:
-        await message.edit("```You didn't gave the text are you even an Otaku?```", del_in=3)
+        await message.edit("```Give me text to search Anime Characters```", del_in=3)
         return
 
     res = ""
