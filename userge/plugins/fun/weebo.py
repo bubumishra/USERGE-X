@@ -66,11 +66,10 @@ async def formatJSON(outData):
            title = "[•]"
         else:
            title = f"[•]({jsonData['bannerImage']})"
-        title += f" <b>{jsonData['title']['romaji']}"
-        title += f" ({jsonData['title']['native']})</b>"
+        titleL = f" <b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
         link = f"https://anilist.co/anime/{jsonData['id']}"
-
-        msg += f"[{title}]({link})"
+        title += f" [{titleL}]({link})"
+        msg += title
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
         if f"{jsonData['isAdult']}" == "True":
            msg += "\n**Rating** : <code>Rx - 18+</code>"
