@@ -9,15 +9,7 @@ from PIL import Image, ImageColor, ImageDraw, ImageFont
     'usage': "{tr}slet [text | reply]",
     'examples': "{tr}slet DeadSun"}, allow_via_bot=False)
 
-def find_optimal_wrap(text):
-    chicken_wrap = int(len(text) / 18) or 20
-    wrapped_text = textwrap.wrap(text, width=chicken_wrap)
 
-    while len(wrapped_text)*3 > chicken_wrap:
-        chicken_wrap += 1
-        wrapped_text = textwrap.wrap(text, width=chicken_wrap)
-
-    return wrapped_text
 
 async def sticklet(message: Message):
     # R = random.randint(0, 256)
@@ -72,5 +64,15 @@ async def sticklet(message: Message):
         os.remove(image_name)
     except Exception:
         pass
+
+def find_optimal_wrap(text):
+    chicken_wrap = int(len(text) / 18) or 20
+    wrapped_text = textwrap.wrap(text, width=chicken_wrap)
+
+    while len(wrapped_text)*3 > chicken_wrap:
+        chicken_wrap += 1
+        wrapped_text = textwrap.wrap(text, width=chicken_wrap)
+
+    return wrapped_text
 
 
