@@ -63,12 +63,12 @@ async def formatJSON(outData):
     else:
         jsonData = jsonData['data']['Media']
         if f"{jsonData['bannerImage']}" == "None":
-           title = "[•]"
+           title = ""
         else:
-           title = f"[•]({jsonData['bannerImage']})"
+           title = f"<a href='{jsonData['bannerImage']}'>\u200c</a>"
         titleL = f" <b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
         link = f"https://anilist.co/anime/{jsonData['id']}"
-        title += f" [{titleL}]({link})"
+        title += f"[{titleL}]({link})"
         msg += title
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
         if f"{jsonData['isAdult']}" == "True":
@@ -130,7 +130,7 @@ async def bigf_func(message):
     for new in anime:
         name = new.get("title")
         url = new.get("url")
-        rep += f"•> <a href='{url}'>{name}</a>\n"
+        rep += f"• <a href='{url}'>{name}</a>\n"
         if len(rep) > 1000:
             break
     await message.edit(rep, parse_mode='html', disable_web_page_preview=True)
