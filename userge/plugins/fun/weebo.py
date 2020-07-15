@@ -69,8 +69,8 @@ async def formatJSON(outData):
         msg += f"{title}"
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
         if f"{jsonData['isAdult']}" == "True":
-           msg += f"\n**Rating** : <code>Rx - 18+</code>"
-        msg += f"\n**Genres** : "
+           msg += "\n**Rating** : <code>Rx - 18+</code>"
+        msg += "\n**Genres** : "
         monog = ", ".join([str(i) for i in jsonData['genres']])
         msg += f"<code>{monog}</code>"
         if f"{jsonData['status']}" == "FINISHED":
