@@ -70,7 +70,7 @@ async def formatJSON(outData):
         msg += f"{title}"
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
         if f"{jsonData['isAdult']}" == "True":
-           msg += f"\n**Rating** : <code>Rx - Hentai<code>"
+           msg += f"\n**Rating** : <code>Rx - 18+</code>"
         msg += f"\n**Genres** : "
         monog = ", ".join([str(i) for i in jsonData['genres']])
         msg += f"<code>{monog}</code>"
@@ -82,13 +82,20 @@ async def formatJSON(outData):
         msg += f"\n**Premiered :** : <code>{jsonData['season']} {jsonData['startDate']['year']}</code>"
         msg += f"\n**Score** : <code>{jsonData['averageScore']}%</code>"
         msg += f"\n**Duration** : <code>{jsonData['duration']} min</code>"
-        if "bannerImage" in jsonData.keys():
+        images = f"\n**Image** : {Banner} {Cover}"
+        if f"{jsonData['coverImage']['extraLarge']}" != "None" and f"{jsonData['bannerImage']}" != "None":
             Banner = f"[Banner]({jsonData['bannerImage']})"
             Cover = f"[Cover]({jsonData['coverImage']['extraLarge']})"
-            msg += f"\n**Image** : {Banner} {Cover}"
+        elif f"{jsonData['coverImage']['extraLarge']}" == "None" and f"{jsonData['bannerImage']}" != "None":   
+            Banner = f"[Banner]({jsonData['bannerImage']})"
+            Cover = ""
+        elif f"{jsonData['coverImage']['extraLarge']}" != "None" and f"{jsonData['bannerImage']}" == "None":
+            Banner = ""
+            Cover = f"[Cover]({jsonData['coverImage']['extraLarge']})"
         else:
-            msg += ""
-        more = f" [[Read More]]({link})"    
+            images = ""
+        msg += images 
+        more = f" <b>[[Read More]]({link})</b>"     
         msg += f"\n\n {jsonData['description']}{more}"
         
         return msg
