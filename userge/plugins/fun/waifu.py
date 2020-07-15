@@ -1,9 +1,7 @@
 """ Creates random anime girl sticker """
 import random
-from random import choice
 from userge import userge, Message
 import re
-from re import sub
 
 EMOJI_PATTERN = re.compile(
     "["

@@ -5,7 +5,6 @@ import json
 from userge import userge, Message
 from jikanpy import Jikan
 from jikanpy.exceptions import APIException
-import asyncio
 import requests
 jikan = Jikan()
 
