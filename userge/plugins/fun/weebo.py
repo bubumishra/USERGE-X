@@ -82,18 +82,16 @@ async def formatJSON(outData):
         msg += f"\n**Premiered :** : <code>{jsonData['season']} {jsonData['startDate']['year']}</code>"
         msg += f"\n**Score** : <code>{jsonData['averageScore']}%</code>"
         msg += f"\n**Duration** : <code>{jsonData['duration']} min</code>"
-        images = f"\n**Image** : {Banner} {Cover}"
+        Banner = f"[Banner]({jsonData['bannerImage']})"
+        Cover = f"[Cover]({jsonData['coverImage']['extraLarge']})"
         if f"{jsonData['coverImage']['extraLarge']}" != "None" and f"{jsonData['bannerImage']}" != "None":
-            Banner = f"[Banner]({jsonData['bannerImage']})"
-            Cover = f"[Cover]({jsonData['coverImage']['extraLarge']})"
+             images = f"\n**Image** : {Banner}, {Cover}"
         elif f"{jsonData['coverImage']['extraLarge']}" == "None" and f"{jsonData['bannerImage']}" != "None":   
-            Banner = f"[Banner]({jsonData['bannerImage']})"
-            Cover = ""
+             images = f"\n**Image** : {Banner}"
         elif f"{jsonData['coverImage']['extraLarge']}" != "None" and f"{jsonData['bannerImage']}" == "None":
-            Banner = ""
-            Cover = f"[Cover]({jsonData['coverImage']['extraLarge']})"
+             images = f"\n**Image** : {Cover}"
         else:
-            images = ""
+             images = ""
         msg += images 
         more = f" <b>[[Read More]]({link})</b>"     
         msg += f"\n\n {jsonData['description']}{more}"
