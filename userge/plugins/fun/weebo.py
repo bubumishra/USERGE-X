@@ -180,7 +180,7 @@ async def manga_(message: Message):
     if not query:
             await message.edit("```Give manga name!```", del_in=3)
             return
-        res = ""
+    res = ""
     manga = ""
     try:
         res = jikan.search("manga", query).get("results")[0].get("mal_id")
