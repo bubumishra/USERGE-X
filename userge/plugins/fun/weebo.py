@@ -92,8 +92,8 @@ async def formatJSON(outData):
         else:
              images = ""
         msg += images 
-        more = f" <b>[[Read More]]({link})</b>"     
-        msg += f"\n\n {jsonData['description']}{more}"
+        more = f"<b>[[Read More]]({link})</b>"     
+        msg += f"\n\n {jsonData['description']} {more}"
         
         return msg
 
