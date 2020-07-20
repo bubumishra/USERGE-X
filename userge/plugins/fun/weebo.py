@@ -57,10 +57,11 @@ async def anime_call_api(search_str):
 async def formatJSON(outData):
     t = TelegraphPoster(use_api=False)
     msg = ""
-    t_image = f"{jsonData['bannerImage']}"
     jsonData = json.loads(outData)
-    titleL = f" <b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
-    telegra_ph = t.post(title=f'{titleL}', author='', text=f'<img src="{t_image}"> {jsonData['description']}')
+    t_image = f"<img src='{jsonData['bannerImage']}'>"
+    t_image += f"{jsonData['description']}" 
+    titleL = f"<b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
+    telegra_ph = t.post(title=titleL, author='', text=t_image)
     res = list(jsonData.keys())
     if "errors" in res:
         msg += f"Error : {jsonData['errors'][0]['message']}"
