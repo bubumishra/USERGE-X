@@ -55,25 +55,22 @@ async def anime_call_api(search_str):
     return response.text
 
 async def formatJSON(outData):
-    t = TelegraphPoster(use_api=False)
     msg = ""
     jsonData = json.loads(outData)
-    testimg = f"{jsonData['bannerImage']}"
-    t_image = f"<img src={testimg}>"
-    t_image += f"{jsonData['description']}" 
-    titleL = f"<b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
-    telegra_ph = t.post(title=titleL, author='', text=t_image)
     res = list(jsonData.keys())
+    jsonData = jsonData['data']['Media']
+    titleL = f"<b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
+    title_tele = f"{jsonData['title']['romaji']} ({jsonData['title']['native']})"
+    if f"{jsonData['bannerImage']}" == "None":
+        tele_img = f"{jsonData['coverImage']['extraLarge']}"
+    else:
+        tele_img = f"{jsonData['bannerImage']}"
+    telegra_ph = t.post(title=f"{title_tele}", author='',text=f"<img src='{tele_img}'>{jsonData['description']}")
     if "errors" in res:
         msg += f"Error : {jsonData['errors'][0]['message']}"
         return msg
     else:
-        jsonData = jsonData['data']['Media']
-        if f"{jsonData['bannerImage']}" == "None":
-           title = ""
-        else:
-           title = f"<a href='{telegra_ph['url']}'>\u200c</a>"
-        
+        title = f"[\u200c]({telegra_ph['url']})"
         link = f"https://anilist.co/anime/{jsonData['id']}"
         title += f"[{titleL}]({link})"
         msg += title
@@ -102,8 +99,6 @@ async def formatJSON(outData):
         else:
              images = ""
         msg += images 
-        #msg += f"\n\n {jsonData['description']}"
-        
         return msg
 
 def replace_text(text):
