@@ -19,6 +19,7 @@ LOGO_STICKER_ID, LOGO_STICKER_REF = None, None
 async def alive(message: Message):
     await message.delete()
     await sendit(message)
+    LicenseX = "[v3.0 GNU](https://github.com/UsergeTeam/Userge/blob/master/LICENSE)"
     output = f"""
 ****USERGE-X is Up and Running****
 
@@ -27,7 +28,8 @@ async def alive(message: Message):
 • 🤖** Pyrogram** : `v{versions.__pyro_version__}`
 • 🧬** Userge** : `v{get_version()}`
 • 🌟** Repo** : [Userge-X]({Config.UPSTREAM_REPO})
-• 📑** License** : {versions.__license__}
+• 📑** License** : {LicenseX}
+
 """
     await message.client.send_message(message.chat.id, output, disable_web_page_preview=True)
 

@@ -9,6 +9,7 @@ from jikanpy.exceptions import APIException
 import requests
 from html_telegraph_poster import TelegraphPoster
 jikan = Jikan()
+t = TelegraphPoster(use_api=False)
 
 async def anime_call_api(search_str):
     query = '''
