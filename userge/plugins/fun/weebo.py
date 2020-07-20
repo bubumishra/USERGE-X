@@ -1,11 +1,13 @@
-#insiped by and Credits to - https://github.com/pokurt/Nana-Remix/blob/master/nana/modules/animelist.py
-#by @DeletedUser420
+"""by @DeletedUser420"""
+#insiped by nana-remix by @pokurt
+
 import requests
 import json
 from userge import userge, Message
 from jikanpy import Jikan
 from jikanpy.exceptions import APIException
 import requests
+from html_telegraph_poster import TelegraphPoster
 jikan = Jikan()
 
 async def anime_call_api(search_str):
@@ -52,10 +54,14 @@ async def anime_call_api(search_str):
     response = requests.post(url, json={'query': query, 'variables': variables})
     return response.text
 
+t = TelegraphPoster(use_api=False)
 
 async def formatJSON(outData):
     msg = ""
     jsonData = json.loads(outData)
+    titleL = f" <b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
+    telegra_ph = t.post(title=f'{titleL}', author='', 
+    text=f'<img src="{jsonData['bannerImage']}"> {jsonData['description']}')
     res = list(jsonData.keys())
     if "errors" in res:
         msg += f"Error : {jsonData['errors'][0]['message']}"
@@ -65,8 +71,8 @@ async def formatJSON(outData):
         if f"{jsonData['bannerImage']}" == "None":
            title = ""
         else:
-           title = f"<a href='{jsonData['bannerImage']}'>\u200c</a>"
-        titleL = f" <b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
+           title = f"<a href='{telegra_ph['url']}'>\u200c</a>"
+        
         link = f"https://anilist.co/anime/{jsonData['id']}"
         title += f"[{titleL}]({link})"
         msg += title
@@ -95,7 +101,7 @@ async def formatJSON(outData):
         else:
              images = ""
         msg += images 
-        msg += f"\n\n {jsonData['description']}"
+        #msg += f"\n\n {jsonData['description']}"
         
         return msg
 
