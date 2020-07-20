@@ -28,7 +28,6 @@ async def alive(message: Message):
 • 🧬** Userge** : `v{get_version()}`
 • 🌟** Repo** : [Userge-X]({Config.UPSTREAM_REPO})
 • 📑** License** : {versions.__license__}
-
 """
     await message.client.send_message(message.chat.id, output, disable_web_page_preview=True)
 
