@@ -58,7 +58,7 @@ async def formatJSON(outData):
     t = TelegraphPoster(use_api=False)
     msg = ""
     jsonData = json.loads(outData)
-    t_image = f"<img src='{jsonData['bannerImage']}'>"
+    t_image = f"<img src={jsonData['bannerImage']}>"
     t_image += f"{jsonData['description']}" 
     titleL = f"<b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
     telegra_ph = t.post(title=titleL, author='', text=t_image)
