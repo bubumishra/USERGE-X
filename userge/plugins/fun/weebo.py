@@ -9,8 +9,8 @@ from jikanpy.exceptions import APIException
 import requests
 from html_telegraph_poster import TelegraphPoster
 jikan = Jikan()
-t = TelegraphPoster(use_api=False)
-
+t = TelegraphPoster(use_api=True)
+t.create_api_token('userge-X')
 async def anime_call_api(search_str):
     query = '''
     query ($id: Int,$search: String) { 
