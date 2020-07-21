@@ -1,34 +1,34 @@
 <p align="center">
-    <a href="https://github.com/UsergeTeam/Userge">
-        <img src="resources/userge.png" alt="Userge">
+    <a href="https://github.com/code-rgb/Userge">
+        <img src="resources/userge-x.png" alt="Userge">
     </a>
     <br>
     <b>Pluggable Telegram UserBot</b>
     <br>
-    <a href="https://github.com/UsergeTeam/Userge#inspiration-">Inspiration</a>
+    <a href="https://github.com/code-rgb/Userge#inspiration-">Inspiration</a>
     &nbsp•&nbsp
-    <a href="https://github.com/UsergeTeam/Userge#features-">Features</a>
+    <a href="https://github.com/code-rgb/Userge#features-">Features</a>
     &nbsp•&nbsp
-    <a href="https://github.com/UsergeTeam/Userge#example-plugin-">Example</a>
+    <a href="https://github.com/code-rgb/Userge#example-plugin-">Example</a>
     &nbsp•&nbsp
-    <a href="https://github.com/UsergeTeam/Userge#requirements-">Requirements</a>
+    <a href="https://github.com/code-rgb/Userge#requirements-">Requirements</a>
     &nbsp•&nbsp
-    <a href="https://github.com/UsergeTeam/Userge#project-credits-">Project Credits</a>
+    <a href="https://github.com/code-rgb/Userge#project-credits-">Project Credits</a>
     &nbsp•&nbsp
-    <a href="https://github.com/UsergeTeam/Userge#copyright--license-">Copyright & License</a>
+    <a href="https://github.com/code-rgb/Userge#copyright--license-">Copyright & License</a>
 </p>
 
-# Userge 🔥
+# Userge 
 
-[![Build Status](https://travis-ci.com/UsergeTeam/Userge.svg?branch=dev)](https://travis-ci.com/UsergeTeam/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey) ![Release](https://img.shields.io/github/v/release/UsergeTeam/Userge) ![Stars](https://img.shields.io/github/stars/UsergeTeam/Userge) ![Forks](https://img.shields.io/github/forks/UsergeTeam/Userge) ![Issues Open](https://img.shields.io/github/issues/UsergeTeam/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/UsergeTeam/Userge) ![PR Open](https://img.shields.io/github/issues-pr/UsergeTeam/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/UsergeTeam/Userge) ![Contributors](https://img.shields.io/github/contributors/UsergeTeam/Userge) ![Repo Size](https://img.shields.io/github/repo-size/UsergeTeam/Userge) ![License](https://img.shields.io/github/license/UsergeTeam/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/UsergeTeam/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/UsergeTeam/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/UsergeTeam/Userge/?ref=repository-badge)
+[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=dev)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey) ![Release](https://img.shields.io/github/v/release/code-rgb/Userge) ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/code-rgb/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
 
 > **Userge** is a Powerful , _Pluggable_ Telegram UserBot written in _Python_ using [Pyrogram](https://github.com/pyrogram/pyrogram).
 
-## Inspiration 😇
+## Inspiration 
 
 > This project is inspired by the following projects :)
 
-* [tg_userbot](https://github.com/watzon/tg_userbot) ( heavily ) 🤗
+* [tg_userbot](https://github.com/watzon/tg_userbot) ( heavily ) 
 * [PyroGramUserBot](https://github.com/SpEcHiDe/PyroGramUserBot)
 * [Telegram-Paperplane](https://github.com/RaphielGang/Telegram-Paperplane)
 * [UniBorg](https://github.com/SpEcHiDe/UniBorg)
@@ -36,10 +36,10 @@
 
 > Special Thanks to all of you !!!.
 
-## Features 😍
+## Features 
 
 * Powerful and Very Useful **built-in** Plugins
-  * gdrive [ upload / download / etc ] ( Team Drives Supported! ) 🤥
+  * gdrive [ upload / download / etc ] ( Team Drives Supported! ) 
   * zip / tar / unzip / untar / unrar
   * telegram upload / download
   * pmpermit / afk
@@ -55,7 +55,7 @@
 * Easy to add / port Plugins
 * Easy to write modules with the modified client
 
-## Example Plugin 🤨
+## Example Plugin 
 
 ```python
 from userge import userge, Message
@@ -73,16 +73,16 @@ async def testing(message: Message):
    await CHANNEL.log("testing completed!")  # log to channel
 ```
 
-## Requirements 🥴
+## Requirements 
 
-* Python 3.7 or Higher 👻
+* Python 3.7 or Higher 
 * Telegram [API Keys](https://my.telegram.org/apps)
 * Google Drive [API Keys](https://console.developers.google.com/)
 * MongoDB [Database URL](https://cloud.mongodb.com/)
 
-## How To Deploy 👷
+## How To Deploy 
 
-* **[HEROKU](https://www.heroku.com/) Method** 🔧
+* **[HEROKU](https://www.heroku.com/) Method** 
 
   > First click the button below. 
 
@@ -100,7 +100,7 @@ async def testing(message: Message):
 
   ```bash
   # clone the repo
-  git clone https://github.com/UsergeTeam/Userge.git
+  git clone https://github.com/code-rgb/Userge.git
   cd Userge
 
   # create virtualenv
@@ -120,32 +120,27 @@ async def testing(message: Message):
   bash run
   ```
 
-* **[More Detailed Guide](https://docs.google.com/document/d/15uoiOn2NkN518MMkx9h5UaMEWMp8aNZqJocXvS0uI6E)** 📝
+* **[More Detailed Guide](https://docs.google.com/document/d/15uoiOn2NkN518MMkx9h5UaMEWMp8aNZqJocXvS0uI6E)** 
 
 > TODO: add Docker Support.
 
-### Guide to Upstream Forked Repo
+<h2>Guide to Upstream Forked Repo</h2>
 * [Upstream Forked Repo](https://telegra.ph/Upstream-Userge-Forked-Repo-Guide-07-04)
 
-### Video Tutorial 🎥
+### Video Tutorial 
 
   [![Tutorial](resources/tutorial.jpg)](https://youtu.be/M4T_BJvFqkc "Tutorial")
 
-### Support & Discussions 👥
+### Support & Discussions 
 
 > Head over to the [Discussion Group](https://t.me/slbotsbugs) and [Update Channel](https://t.me/theUserge)
 
-### Project Credits 💆‍♂️
+### Project Credits 
 
-* [Specially to these projects](https://github.com/UsergeTeam/Userge#inspiration-) 🥰
-* [@uaudIth](https://t.me/uaudIth)
-* [@K_E_N_W_A_Y](https://t.me/K_E_N_W_A_Y)
-* [@nawwasl](https://t.me/nawwasl)
-* [@TharukaN97](https://t.me/TharukaN97)
-* [@Supun97](https://t.me/Supun97)
-* [@gotstc](https://t.me/gotstc)
+* [Specially to these projects](https://github.com/code-rgb/Userge#inspiration-) 
+* Team Userge
 
-### Copyright & License 👮
+### Copyright & License 
 
-* Copyright (C) 2020 by [UsergeTeam](https://github.com/UsergeTeam) ❤️️
-* Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/UsergeTeam/Userge/blob/master/LICENSE)
+* Copyright (C) 2020 by [UsergeTeam](https://github.com/UsergeTeam) 
+* Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/code-rgb/Userge/blob/master/LICENSE)
