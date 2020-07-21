@@ -60,6 +60,7 @@ async def formatJSON(outData):
     jsonData = json.loads(outData)
     res = list(jsonData.keys())
     jsonData = jsonData['data']['Media']
+    #sudden none type error here wtf idk how
     titleL = f"<b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
     title_tele = f"{jsonData['title']['romaji']} ({jsonData['title']['native']})"
     if f"{jsonData['bannerImage']}" == "None":
