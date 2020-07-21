@@ -5,6 +5,9 @@
     <br>
     <b>Pluggable Telegram UserBot</b>
     <br>
+     &nbsp•&nbsp
+    <a href="https://github.com/code-rgb/Userge#disclaimer-">Disclaimer</a>
+    &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#inspiration-">Inspiration</a>
     &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#features-">Features</a>
@@ -20,9 +23,34 @@
 
 # Userge 
 
-[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=dev)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey) ![Release](https://img.shields.io/github/v/release/code-rgb/Userge) ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/code-rgb/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
+[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=dev)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey)  ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/UsergeTeam/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
 
 > **Userge** is a Powerful , _Pluggable_ Telegram UserBot written in _Python_ using [Pyrogram](https://github.com/pyrogram/pyrogram).
+
+
+
+## Disclaimer
+
+                
+   ```
+
+/**
+    ⚠️Kang at your own risk⚠️          
+    Your Telegram account may get banned.
+    I am not responsible for any improper use of this bot
+    This bot is intended for the purpose of having fun with memes,
+    as well as efficiently managing groups.
+    It can help you with managing yourself as well.
+    You ended up spamming groups, getting reported left and right,
+    and then you ended up in a Final Battle with Telegram
+    and at the end the Telegram Team
+    deleted your account?
+    And after that, you pointed your fingers at us
+    for getting your account deleted?
+    We will be rolling on the floor laughing at you.
+    Yes! you heard it right.
+/**
+```
 
 ## Inspiration 
 
@@ -132,8 +160,9 @@ async def testing(message: Message):
   [![Tutorial](resources/tutorial.jpg)](https://youtu.be/M4T_BJvFqkc "Tutorial")
 
 ### Support & Discussions 
+<p align="center"><b>Userge-X Owner: <a href="https://t.me/deleteduser420">𝚂𝚢𝚗𝚝𝚊𝚡 ░ Σrr♢r</b></a></p>
 
-> Head over to the [Discussion Group](https://t.me/slbotsbugs) and [Update Channel](https://t.me/theUserge)
+> Head over to the [Update Channel](https://t.me/theUserge)
 
 ### Project Credits 
 
