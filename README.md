@@ -3,7 +3,8 @@
         <img src="resources/userge-x.png" alt="Userge-x" width=400px>
     </a>
     <br>
-    <b>Pluggable Telegram UserBot</b>
+    <br>
+    <h3>Pluggable Telegram UserBot</h3>
     <br>
      &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#disclaimer-">Disclaimer</a>
