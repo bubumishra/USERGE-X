@@ -4,7 +4,7 @@
     </a>
     <br>
     <br>
-    <h3>Pluggable Telegram UserBot</h3>
+    <h3 align=center>Pluggable Telegram UserBot</h3>
     <br>
      &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#disclaimer-">Disclaimer</a>
