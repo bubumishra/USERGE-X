@@ -18,7 +18,6 @@ async def anime_call_api(search_str):
         id
         title {
           romaji
-          english
           native
         }
         description (asHtml: false)
@@ -60,8 +59,6 @@ async def formatJSON(outData):
     jsonData = json.loads(outData)
     res = list(jsonData.keys())
     jsonData = jsonData['data']['Media']
-    #sudden none type error here wtf idk how
-    titleL = f"<b>{jsonData['title']['romaji']} ({jsonData['title']['native']})</b>"
     title_tele = f"{jsonData['title']['romaji']} ({jsonData['title']['native']})"
     if f"{jsonData['bannerImage']}" == "None":
         tele_img = f"{jsonData['coverImage']['extraLarge']}"
@@ -73,8 +70,9 @@ async def formatJSON(outData):
         return msg
     else:
         title = f"[\u200c]({telegra_ph['url']})"
+        #titleL = f"{jsonData['title']['romaji']} ({jsonData['title']['native']})"
         link = f"https://anilist.co/anime/{jsonData['id']}"
-        title += f"[{titleL}]({link})"
+        title += f"<b>[{title_tele}]({link})</b>"
         msg += title
         msg += f"\n**Type** : <code>{jsonData['format']}</code>"
         if f"{jsonData['isAdult']}" == "True":
