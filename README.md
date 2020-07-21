@@ -153,14 +153,14 @@ async def testing(message: Message):
 > TODO: add Docker Support.
 
 <h2>Guide to Upstream Forked Repo</h2>
->> [Upstream Forked Repo](https://telegra.ph/Upstream-Userge-Forked-Repo-Guide-07-04)
+<a href="https://telegra.ph/Upstream-Userge-Forked-Repo-Guide-07-04"><b>Upstream Forked Repo</b></a>
 
 
 ### Video Tutorial 
 
-<a href="https://youtu.be/M4T_BJvFqkc"><img src="resources/tutorial.jpg width="650px" alt="Tutorial"></a>
+<a href="https://youtu.be/M4T_BJvFqkc"><img src="resources/tutorial.jpg" width="650px" alt="Tutorial"></a>
 ### Support & Discussions 
-<p><b>Userge-X Owner: <a href="https://t.me/deleteduser420">𝚂𝚢𝚗𝚝𝚊𝚡 ░ Σrr♢r</b></a></p>
+
 
 > Head over to the [Update Channel](https://t.me/theUserge)
 
@@ -173,3 +173,6 @@ async def testing(message: Message):
 
 * Copyright (C) 2020 by [UsergeTeam](https://github.com/UsergeTeam) 
 * Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/code-rgb/Userge/blob/master/LICENSE)
+
+
+<h2 align="center">Userge-X Owner: <a href="https://t.me/deleteduser420">𝚂𝚢𝚗𝚝𝚊𝚡 ░ Σrr♢r</a></h2>
