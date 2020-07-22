@@ -21,7 +21,7 @@
 
 # Userge-X 
 
-[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=alpha)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey)  ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/UsergeTeam/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
+[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=alpha)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey) [![HitCount](http://hits.dwyl.com/code-rgb/Userge.svg)](http://hits.dwyl.com/code-rgb/Userge)  ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/UsergeTeam/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
 
 > **Userge-X** is a Powerful , _Pluggable_ Telegram UserBot written in _Python_ using [Pyrogram](https://github.com/pyrogram/pyrogram).
 
@@ -110,7 +110,7 @@ async def testing(message: Message):
 
 * **[HEROKU](https://www.heroku.com/) Method** 
 
-  > First click the button below. 
+  <b>First click the button below.</b> 
 
   > If you don't have HU_STRING_SESSION just ignore it.  
 
