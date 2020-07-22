@@ -1,14 +1,9 @@
 <p align="center">
-    <a href="https://github.com/code-rgb/Userge">
-        <img src="resources/userge-x.png" alt="Userge-x" width=400px>
-    </a>
+    <a href="https://github.com/code-rgb/Userge"><img src="resources/userge-x.png" alt="Userge-x" width=400px></a>
     <br>
+    <b>Pluggable Telegram UserBot</b>
     <br>
-    </p>
-    <h3 align=center>Pluggable Telegram UserBot</h3>
-    <p align="center">
-    <br>
-     &nbsp•&nbsp
+    &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#disclaimer-">Disclaimer</a>
     &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#inspiration-">Inspiration</a>
@@ -26,7 +21,7 @@
 
 # Userge-X 
 
-[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=dev)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey)  ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/UsergeTeam/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
+[![Build Status](https://travis-ci.com/code-rgb/Userge.svg?branch=alpha)](https://travis-ci.com/code-rgb/Userge) ![Python Version](https://img.shields.io/badge/python-3.7/3.8-lightgrey)  ![Stars](https://img.shields.io/github/stars/code-rgb/Userge) ![Forks](https://img.shields.io/github/forks/code-rgb/Userge) ![Issues Open](https://img.shields.io/github/issues/code-rgb/Userge) ![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/Userge) ![PR Open](https://img.shields.io/github/issues-pr/code-rgb/Userge) ![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/Userge) ![Contributors](https://img.shields.io/github/contributors/code-rgb/Userge) ![Repo Size](https://img.shields.io/github/repo-size/code-rgb/Userge) ![License](https://img.shields.io/github/license/code-rgb/Userge) ![Commit Activity](https://img.shields.io/github/commit-activity/m/code-rgb/Userge) [![Plugins Repo!](https://img.shields.io/badge/Plugins%20Repo-!-orange)](https://github.com/UsergeTeam/Userge-Plugins) [![Join Channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/theUserge) [![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/code-rgb/Userge/?ref=repository-badge)
 
 > **Userge-X** is a Powerful , _Pluggable_ Telegram UserBot written in _Python_ using [Pyrogram](https://github.com/pyrogram/pyrogram).
 
@@ -178,4 +173,4 @@ async def testing(message: Message):
 * Licensed under the terms of the [GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007](https://github.com/code-rgb/Userge/blob/master/LICENSE)
 
 <br>
-<h3 align="center">Userge-X Owner: <a href="https://t.me/deleteduser420">𝚂𝚢𝚗𝚝𝚊𝚡 ░ Σrr♢r</a></h3>
+<p align="center"><b>Userge-X Owner: <a href="https://t.me/deleteduser420">𝚂𝚢𝚗𝚝𝚊𝚡 ░ Σrr♢r</a></b></p>
