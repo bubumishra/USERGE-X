@@ -1,6 +1,8 @@
 <p align="center">
     <a href="https://github.com/code-rgb/Userge"><img src="resources/userge-x.png" alt="Userge-x" width=400px></a>
+    <br>
     <b>Pluggable Telegram UserBot</b>
+    <br>
     &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#disclaimer-">Disclaimer</a>
     &nbsp•&nbsp
