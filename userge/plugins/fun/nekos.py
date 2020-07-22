@@ -1,6 +1,5 @@
 import nekos
 import asyncio
-from asyncio import sleep
 from userge import userge, Message
 
 
