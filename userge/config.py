@@ -28,7 +28,7 @@ LogBot.reply_last_msg("Setting Configs ...")
 
 class Config:
     """ Configs to setup Userge """
-    API_ID = int(os.environ.get("API_ID"))
+    API_ID = int(os.environ.get("API_ID", 0))
     API_HASH = os.environ.get("API_HASH")
     WORKERS = int(os.environ.get("WORKERS"))
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
