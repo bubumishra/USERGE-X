@@ -1,13 +1,7 @@
 <p align="center">
-    <a href="https://github.com/code-rgb/Userge">
-        <img src="resources/userge-x.png" alt="Userge-x" width=400px>
-    </a>
-    </p>
-  
+    <a href="https://github.com/code-rgb/Userge"><img src="resources/userge-x.png" alt="Userge-x" width=400px></a>
     <b>Pluggable Telegram UserBot</b>
-    
-    <p align="center">
-     &nbsp•&nbsp
+    &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#disclaimer-">Disclaimer</a>
     &nbsp•&nbsp
     <a href="https://github.com/code-rgb/Userge#inspiration-">Inspiration</a>
