@@ -6,7 +6,6 @@ import json
 from userge import userge, Message
 from jikanpy import Jikan
 from jikanpy.exceptions import APIException
-import requests
 from html_telegraph_poster import TelegraphPoster
 jikan = Jikan()
 t = TelegraphPoster(use_api=True)
