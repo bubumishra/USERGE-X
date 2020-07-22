@@ -110,7 +110,7 @@ async def testing(message: Message):
 
 * **[HEROKU](https://www.heroku.com/) Method** 
 
-  <b>First click the button below.<b> 
+  <b>First click the button below.</b> 
 
   > If you don't have HU_STRING_SESSION just ignore it.  
 
