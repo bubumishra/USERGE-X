@@ -34,7 +34,7 @@ class Config:
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
     HU_STRING_SESSION = os.environ.get("HU_STRING_SESSION", None)
     OWNER_ID = int(os.environ.get("OWNER_ID", 0))
-    LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID"))
+    LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID", 0))
     DB_URI = os.environ.get("DATABASE_URL")
     LANG = os.environ.get("PREFERRED_LANGUAGE")
     DOWN_PATH = os.environ.get("DOWN_PATH")
