@@ -75,7 +75,7 @@ async def transform(message: Message):
     color1 = c_list[0]
     color2 = c_list[1]
     bgcolor = "#080808" 
-    webp_file = asciiart(dls_loc, 0.3, 1.8, color1, color2, bgcolor)
+    webp_file = asciiart(dls_loc, 0.2, 1.9, color1, color2, bgcolor)
     await message.client.send_sticker(chat_id=message.chat.id,
                                     sticker=webp_file,
                                     reply_to_message_id=replied.message_id)
