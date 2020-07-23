@@ -75,7 +75,7 @@ async def transform(message: Message):
     color1 = c_list[0]
     color2 = c_list[1]
     bgcolor = "#080808" 
-    webp_file = asciiart(dls_loc, 0.5, 1.7, color1, color2, bgcolor)
+    webp_file = asciiart(dls_loc, 0.3, 1.8, color1, color2, bgcolor)
     await message.client.send_sticker(chat_id=message.chat.id,
                                     sticker=webp_file,
                                     reply_to_message_id=replied.message_id)
@@ -118,7 +118,7 @@ def asciiart(in_f, SC, GCF, color1, color2, bgcolor):
         draw.text((leftpadding, y), line, color.hex, font=font)
         y += letter_height
     # Save the image file
-    image_name = "invert.webp"
+    image_name = "ascii.webp"
     webp_file = os.path.join(Config.DOWN_PATH, image_name)
     newImg.save(webp_file, "WebP")
     return webp_file
