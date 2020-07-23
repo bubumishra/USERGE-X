@@ -9,7 +9,7 @@ from userge.utils import progress, take_screen_shot, runcmd
 @userge.on_cmd("(invert|mirror|rotate)$", about={
     'header': "Invert or Mirror or Rotate the Media.",
     'description': "transform on any gif/sticker/image. ",
-    'usage': "{tr}invert to invert colors\n {tr}mirror to mirror flip\n {tr}rotate to Rotate 90° C.W.",
+    'usage': "{tr} invert to invert colors\n {tr}mirror to mirror flip\n {tr}rotate to Rotate 90° C.W.",
     'examples': "{tr}invert as a reply."},name="magic")
 async def transform(message: Message):
     replied = message.reply_to_message

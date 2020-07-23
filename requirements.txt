@@ -40,3 +40,5 @@ jikanpy
 nekos.py
 html-telegraph-poster
 igramscraper
+numpy
+colour
