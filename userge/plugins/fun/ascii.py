@@ -1,24 +1,8 @@
 """Reply to an Media to convert to ascii sticker"""
-# Copyright (C) 2020 by UsergeTeam@Github, < https://github.com/UsergeTeam >.
-#
-# This file is part of < https://github.com/UsergeTeam/Userge > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/uaudith/Userge/blob/master/LICENSE >
-#
-# All rights reserved.
+# Module by @deleteduser420 (https://github.com/code-rgb)
 
-# The function convert an image to ascii art
-# f: Input filename
-# SC: the horizontal pixel sampling rate. It should be between 0(exclusive) and 1(inclusive). The larger the number, the more details in the output. 
-#   If you want the ascii art output be the same size as input, use ~ 1/ font size width. 
-# GCF: >0. It's an image tuning factor. If GCF>1, the image will look brighter; if 0<GCF<1, the image will look darker.
-# out_f: output filename
-# color1, color2, bgcolor: follow W3C color naming https://www.w3.org/TR/css3-color/#svg-color
-
-# Copyright 2017, Shanshan Wang, MIT license
-# Based on https://gist.github.com/wshanshan/c825efca4501a491447056849dd207d6
-
-# Module by @deleteduser420
+#Copyright 2017, Shanshan Wang, MIT license
+# Based on https://gist.github.com/wshanshan/c825efca4501a491447056849dd207d6 
 
 import os
 import time
@@ -33,9 +17,9 @@ from random import randrange
 @userge.on_cmd("ascii", about={
     'header': "Ascii Sticker",
     'description': "transform on any gif/sticker/image to an Ascii Sticker. ",
-    'usage': " {tr}ascii",
+    'usage': " {tr}ascii [reply to media]",
     'flags': {
-        '-alt': "To get random sticker"},
+        '-alt': "To get inverted Ascii Sticker"},
     'examples': [
         "{tr}ascii [reply to media]",
         "{tr}ascii -alt [reply to media]"]})
@@ -47,9 +31,9 @@ async def ascii_(message: Message):
             sticker="CAADAQADhgADwKwII4f61VT65CNGFgQ", chat_id=message.chat.id)
         return 
     if '-alt' in message.flags:
-        ascii_type = "alt"
+        ascii_type == "alt"
     else:
-        ascii_type = "normal"
+        ascii_type == "normal"
     if not (replied.photo or replied.sticker or replied.animation):
         await message.err("<code>Bruh You need help! I mean read HELP!</code>")
         return
@@ -94,7 +78,7 @@ async def ascii_(message: Message):
     color1 = c_list[0]
     color2 = c_list[1]
     bgcolor = "#080808" 
-    webp_file = asciiart(dls_loc, 0.2, 1.9, color1, color2, bgcolor, ascii_type)
+    webp_file = asciiart(dls_loc, 0.1, 1.9, color1, color2, bgcolor, ascii_type)
     await message.client.send_sticker(chat_id=message.chat.id,
                                     sticker=webp_file,
                                     reply_to_message_id=replied.message_id)
@@ -110,7 +94,7 @@ def asciiart(in_f, SC, GCF, color1, color2, bgcolor, ascii_type):
     WCF = letter_height/letter_width
     #open the input file
     img = Image.open(in_f)
-    if ascii_type = "alt":
+    if ascii_type == "alt":
         img = ImageOps.invert(img)
     widthByLetter=round(img.size[0]*SC*WCF)
     heightByLetter = round(img.size[1]*SC)
