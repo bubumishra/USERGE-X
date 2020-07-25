@@ -35,7 +35,7 @@ from random import randrange
     'description': "transform on any gif/sticker/image to an Ascii Sticker. ",
     'usage': " {tr}ascii",
     'flags': {
-        '-alt': "To get random sticker"}
+        '-alt': "To get random sticker"},
     'examples': [
         "{tr}ascii [reply to media]",
         "{tr}ascii -alt [reply to media]"]})
