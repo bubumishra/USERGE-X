@@ -1,3 +1,12 @@
+"""Reply to an Media to convert to ascii sticker"""
+# Copyright (C) 2020 by UsergeTeam@Github, < https://github.com/UsergeTeam >.
+#
+# This file is part of < https://github.com/UsergeTeam/Userge > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/uaudith/Userge/blob/master/LICENSE >
+#
+# All rights reserved.
+
 # The function convert an image to ascii art
 # f: Input filename
 # SC: the horizontal pixel sampling rate. It should be between 0(exclusive) and 1(inclusive). The larger the number, the more details in the output. 
@@ -5,39 +14,49 @@
 # GCF: >0. It's an image tuning factor. If GCF>1, the image will look brighter; if 0<GCF<1, the image will look darker.
 # out_f: output filename
 # color1, color2, bgcolor: follow W3C color naming https://www.w3.org/TR/css3-color/#svg-color
-#
+
 # Copyright 2017, Shanshan Wang, MIT license
 # Based on https://gist.github.com/wshanshan/c825efca4501a491447056849dd207d6
+
 # Module by @deleteduser420
 
 import os
 import time
-from PIL import Image, ImageFont, ImageDraw
+from PIL import Image, ImageFont, ImageDraw, ImgOps
 from userge import userge, Message, Config
 from userge.utils import progress, take_screen_shot, runcmd
 import numpy as np
 from colour import Color
 import random
 from random import randrange
-'''Reply to an Media and see the Magic'''
-@userge.on_cmd("ascii$", about={
+
+@userge.on_cmd("ascii", about={
     'header': "Ascii Sticker",
     'description': "transform on any gif/sticker/image to an Ascii Sticker. ",
     'usage': " {tr}ascii",
-    'examples': "{tr}ascii as a reply."})
-async def transform(message: Message):
+    'flags': {
+        '-alt': "To get random sticker"}
+    'examples': [
+        "{tr}ascii [reply to media]",
+        "{tr}ascii -alt [reply to media]"]})
+async def ascii_(message: Message):
     replied = message.reply_to_message
     if not replied:
         await message.err("<code>Give Me Something (¬_¬)</code>")
         await message.client.send_sticker(
             sticker="CAADAQADhgADwKwII4f61VT65CNGFgQ", chat_id=message.chat.id)
         return 
+    if '-alt' in message.flags:
+        ascii_type = "alt"
+    else:
+        ascii_type = "normal"
     if not (replied.photo or replied.sticker or replied.animation):
         await message.err("<code>Bruh You need help! I mean read HELP!</code>")
         return
     if not os.path.isdir(Config.DOWN_PATH):
         os.makedirs(Config.DOWN_PATH)
     await message.edit(f"<code>Converting Media!...</code>")
+    
     c_time = time.time()
 
     dls = await message.client.download_media(
@@ -75,7 +94,7 @@ async def transform(message: Message):
     color1 = c_list[0]
     color2 = c_list[1]
     bgcolor = "#080808" 
-    webp_file = asciiart(dls_loc, 0.2, 1.9, color1, color2, bgcolor)
+    webp_file = asciiart(dls_loc, 0.2, 1.9, color1, color2, bgcolor, ascii_type)
     await message.client.send_sticker(chat_id=message.chat.id,
                                     sticker=webp_file,
                                     reply_to_message_id=replied.message_id)
@@ -83,7 +102,7 @@ async def transform(message: Message):
     os.remove(webp_file)
 
 
-def asciiart(in_f, SC, GCF, color1, color2, bgcolor):
+def asciiart(in_f, SC, GCF, color1, color2, bgcolor, ascii_type):
     chars = np.asarray(list(' .,:irs?@9B&#'))
     font = ImageFont.load_default()
     letter_width = font.getsize("x")[0]
@@ -91,6 +110,8 @@ def asciiart(in_f, SC, GCF, color1, color2, bgcolor):
     WCF = letter_height/letter_width
     #open the input file
     img = Image.open(in_f)
+    if ascii_type = "alt":
+        img = ImageOps.invert(img)
     widthByLetter=round(img.size[0]*SC*WCF)
     heightByLetter = round(img.size[1]*SC)
     S = (widthByLetter, heightByLetter)
