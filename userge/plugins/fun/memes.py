@@ -621,6 +621,103 @@ async def luv_story(message):
        await message.edit(animation_chars[i % 14])                  
 
 
+@userge.on_cmd("earth$", about={'header': "Beautiful Earth Animation"})
+async def sun_(message: Message):
+    """earth"""
+    deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
+    try:
+        for _ in range(32):
+            await sleep(0.3)
+            await message.edit("".join(deq))
+            deq.rotate(1)
+    except Exception:
+        await message.delete()
+
+@userge.on_cmd("brain$", about={'header': "Dump your Brain into Trash"})
+async def brain_func(message):
+    animation_chars = [
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠         <(^_^ <)🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠       <(^_^ <)  🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠     <(^_^ <)    🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠   <(^_^ <)      🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠 <(^_^ <)        🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠<(^_^ <)         🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n(> ^_^)>🧠         🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n  (> ^_^)>🧠       🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n    (> ^_^)>🧠     🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n      (> ^_^)>🧠   🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n        (> ^_^)>🧠 🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n          (> ^_^)>🧠🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           (> ^_^)>🗑",
+        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           <(^_^ <)🗑",
+    ]
+    for i in range(14):
+        await asyncio.sleep(0.3)
+        await message.edit(animation_chars[i % 14])
+
+@userge.on_cmd("hack$", about={'header': "kensar hacking animation"})
+async def hack_func(message):
+    user = await message.client.get_user_dict(message.from_user.id)
+    heckerman = user['mention']
+    animation_chars = [
+        "```Connecting To Private Server \\```",
+        "```Connecting To Private Server |```",
+        "```Connecting To Private Server /```",
+        "```Connecting To Private Server \\```",
+        "```Connection Established ```",
+        "```Target Selected```",
+        "```Backdoor Found In Target```",
+        "```Trying To Hack```",
+        "```Hacking... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Hacking... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Hacking... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Hacking... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Hacking... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒```",
+        "```Hacking... 70%\n█████████████████▒▒▒▒▒```",
+        "```Hacking... 88%\n█████████████████████▒```",
+        "```Hacking... 100%\n███████████████████████```",
+        "```Preparing Data... 1%\n▒██████████████████████```",
+        "```Preparing Data... 14%\n████▒██████████████████```",
+        "```Preparing Data... 30%\n████████▒██████████████```",
+        "```Preparing Data... 55%\n████████████▒██████████```",
+        "```Preparing Data... 72%\n████████████████▒██████```",
+        "```Preparing Data... 88%\n████████████████████▒██```",
+        "```Prepared Data... 100%\n███████████████████████```",
+        "```Uploading Data to Server... 12%\n███▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Uploading Data to Server... 44%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒```",
+        "```Uploading Data to Server... 68%\n███████████████▒▒▒▒▒▒▒▒```",
+        "```Uploading Data to Server... 89%\n████████████████████▒▒▒```",
+        "```Uploaded Data to Server... 100%\n███████████████████████```",
+        "**User Data Upload Completed:** Target's User Data Stored "
+        "at `downloads/victim/telegram-authuser.data.sql`",
+    ]
+    hecked = (f"**Targeted Account Hacked**\n\n```Pay 69$ To``` {heckerman}``` "
+              "To Remove This Hack```")
+    max_ani = len(animation_chars)
+    for i in range(max_ani):
+        await asyncio.sleep(2)
+        await message.edit(animation_chars[i % max_ani])
+    await message.edit(hecked)
+
+@userge.on_cmd("kill$", about={'header': "Kill anybody With Full Power ;-)"})
+async def kill_func(message):
+    animation_chars = [
+        "killing...",
+        "Ｆｉｉｉｉｉｒｅ",
+        "(　･ิω･ิ)︻デ═一-->",
+        "------>_____________",
+        "--------->___⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠⁠_______",
+        "-------------->_____",
+        "------------------->",
+        "------>;(^。^)ノ",
+        "(￣ー￣) DED",
+        "<b>Target killed successfully (´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)</b>",
+    ]
+    for i in range(10):
+        await asyncio.sleep(0.6)
+        await message.edit(animation_chars[i % 10], parse_mode="html")
+
 THROW = ("throws", "flings", "chucks", "hurls")
 
 HIT = ("hits", "whacks", "slaps", "smacks", "bashes")
