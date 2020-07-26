@@ -26,7 +26,7 @@ _CATEGORY = {
     'misc': '⚙️',
     'tools': '🧰',
     'utils': '🗂',
-    'unofficial': '🃏',
+    '[Extra]': '✳️',
     'temp': '♻️',
     'plugins': '💎'
 }
