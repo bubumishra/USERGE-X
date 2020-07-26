@@ -49,6 +49,7 @@ async def transform(message: Message):
             await message.err("<code>This sticker is BAKA, i won't Invert it ≧ω≦</code>")
             raise Exception(stdout + stderr)
         dls_loc = png_file
+        os.remove(png_file)
     elif replied.animation:
         await message.edit("<code>Look it's GF. Oh, no it's just a Gif</code>")
         jpg_file = os.path.join(Config.DOWN_PATH, "picture.jpg")
@@ -58,6 +59,7 @@ async def transform(message: Message):
             await message.err("<code>This Gif is  (｡ì _ í｡), won't invert it.</code>")
             return
         dls_loc = jpg_file
+        os.remove(jpg_file)
     webp_file = await transform_media(dls_loc, transform_choice)
     await message.client.send_sticker(
         chat_id=message.chat.id,
@@ -65,7 +67,7 @@ async def transform(message: Message):
         reply_to_message_id=replied.message_id)
     await message.delete()
     os.remove(webp_file)
-    os.remove(dls_loc)
+    
     
 async def transform_media(image_path, transform_choice):
     im = Image.open(image_path)
@@ -137,6 +139,7 @@ async def rotate_(message: Message):
             await message.err("<code>This sticker is BAKA, i won't Rotate it ≧ω≦</code>")
             raise Exception(stdout + stderr)
         dls_loc = png_file
+        os.remove(png_file)
 
     elif replied.animation:
         await message.edit("<code>Look it's GF. Oh, no it's just a Gif</code>")
@@ -147,13 +150,14 @@ async def rotate_(message: Message):
             await message.err("<code>This Gif is wierd I can rotate it!</code>")
             return
         dls_loc = jpg_file
+        os.remove(jpg_file)
+    
     webp_file = await rotate_media(dls_loc, args)
     await message.client.send_sticker(chat_id=message.chat.id,
                                     sticker=webp_file,
                                     reply_to_message_id=replied.message_id)
     await message.delete()
     os.remove(webp_file)
-    os.remove(dls_loc)
     
 async def rotate_media(image_path, args):
     im = Image.open(image_path)

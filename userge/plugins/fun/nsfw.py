@@ -1,6 +1,7 @@
 import os
 import urllib
 import requests
+import asyncio
 from asyncio import sleep
 from userge import userge , Message
 
@@ -11,7 +12,7 @@ from userge import userge , Message
 async def boobs(message: Message):
     await message.edit("`Finding some big bobs 🧐...`")
     await asyncio.sleep(0.5)
-    await message.edit("`Sending some big boobs 🌚...`")
+    await message.edit("`Sending some big bobs 🌚...`")
     nsfw = requests.get('http://api.oboobs.ru/noise/1').json()[0]["preview"]
     pic_loc = "downloads/boobs.jpg"
     urllib.request.urlretrieve("http://media.oboobs.ru/{}".format(nsfw), pic_loc)
