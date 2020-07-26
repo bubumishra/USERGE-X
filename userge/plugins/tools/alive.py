@@ -27,11 +27,11 @@ async def alive(message: Message):
     output = f"""
 **USERGE-X is Up and Running**
 
-<u>Extra Plugins<u> : `{extra_plugin}`
+<u>Extra Plugins</u> : `{extra_plugin}`
 
 • 🕔** Uptime** : `{userge.uptime}`
 • 🐍** Python** : `v{versions.__python_version__}`
-• 🤖** Pyrogram** : `v{versions.__pyro_version__}`
+• 🔥** Pyrogram** : `v{versions.__pyro_version__}`
 • 🧬** Userge** : `v{get_version()}`
 • 🌟** Repo** : [Userge-X]({Config.UPSTREAM_REPO})
 • 📑** License** : {LicenseX}
