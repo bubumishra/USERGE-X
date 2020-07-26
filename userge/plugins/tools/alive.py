@@ -21,19 +21,19 @@ async def alive(message: Message):
     await sendit(message)
     LicenseX = "[v3.0 GNU](https://github.com/UsergeTeam/Userge/blob/master/LICENSE)"
     if {Config.LOAD_UNOFFICIAL_PLUGINS}:
-        extra_plugin = "✅ <i>Enabled</i>"
+        extra_plugin = "✅ Enabled"
     else:
-        extra_plugin = "❌ <i>Disabled</i>"
+        extra_plugin = "❌ Disabled"
     output = f"""
-****USERGE-X is Up and Running****
+**USERGE-X is Up and Running**
 
+<u>Extra Plugins<u> : `{extra_plugin}`
 
 • 🕔** Uptime** : `{userge.uptime}`
 • 🐍** Python** : `v{versions.__python_version__}`
 • 🤖** Pyrogram** : `v{versions.__pyro_version__}`
 • 🧬** Userge** : `v{get_version()}`
 • 🌟** Repo** : [Userge-X]({Config.UPSTREAM_REPO})
-• ✳️** [Extra] Plugins** : `{extra_plugin}`
 • 📑** License** : {LicenseX}
 
 """
