@@ -49,7 +49,6 @@ async def transform(message: Message):
             await message.err("<code>This sticker is BAKA, i won't Invert it ≧ω≦</code>")
             raise Exception(stdout + stderr)
         dls_loc = png_file
-
     elif replied.animation:
         await message.edit("<code>Look it's GF. Oh, no it's just a Gif</code>")
         jpg_file = os.path.join(Config.DOWN_PATH, "picture.jpg")
@@ -60,11 +59,13 @@ async def transform(message: Message):
             return
         dls_loc = jpg_file
     webp_file = await transform_media(dls_loc, transform_choice)
-    await message.client.send_sticker(chat_id=message.chat.id,
-                                    sticker=webp_file,
-                                    reply_to_message_id=replied.message_id)
+    await message.client.send_sticker(
+        chat_id=message.chat.id,
+        sticker=webp_file,
+        reply_to_message_id=replied.message_id)
     await message.delete()
     os.remove(webp_file)
+    os.remove(dls_loc)
     
 async def transform_media(image_path, transform_choice):
     im = Image.open(image_path)
@@ -73,7 +74,7 @@ async def transform_media(image_path, transform_choice):
        im = im.convert('RGB')
     if transform_choice == "invert":
         out = ImageOps.invert(im)
-    if transform_choice == "flip":    
+    elif transform_choice == "flip":    
         out = ImageOps.flip(im)
     else:
         out = im.transpose(Image.FLIP_LEFT_RIGHT)
@@ -94,7 +95,7 @@ async def rotate_(message: Message):
         await message.err("<code>Give Me Something to Rotate (¬_¬)</code>")
         await message.client.send_sticker(
             sticker="CAADAQADhgADwKwII4f61VT65CNGFgQ", chat_id=message.chat.id)
-        return 
+        return
     if not (replied.photo or replied.sticker or replied.animation):
         await message.err("<code>Bruh You need help! I mean read HELP!</code>")
         return
@@ -152,6 +153,7 @@ async def rotate_(message: Message):
                                     reply_to_message_id=replied.message_id)
     await message.delete()
     os.remove(webp_file)
+    os.remove(dls_loc)
     
 async def rotate_media(image_path, args):
     im = Image.open(image_path)

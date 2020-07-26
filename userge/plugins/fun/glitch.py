@@ -52,7 +52,8 @@ async def glitch_this(message: Message):
             await message.err("<code>This sticker is BAKA, i won't Glitch it ≧ω≦</code>")
             raise Exception(stdout + stderr)
         dls_loc = png_file
-
+        
+        
     elif replied.animation:
         await message.edit("<code>Look it's GF. Oh, no it's just a Gif</code>")
         jpg_file = os.path.join(Config.DOWN_PATH, "picture.jpg")
@@ -62,6 +63,7 @@ async def glitch_this(message: Message):
             await message.err("<code>This Gif is  (｡ì _ í｡), won't Glitch it.</code>")
             return
         dls_loc = jpg_file
+        
 
     webp_file = glitch_fun(dls_loc, glevel)
     await message.client.send_animation(chat_id=message.chat.id,
@@ -69,6 +71,7 @@ async def glitch_this(message: Message):
                                     reply_to_message_id=replied.message_id)
     await message.delete()
     os.remove(webp_file)
+    os.remove(dls_loc)
 
 def glitch_fun(file_name, glevel):
     img = Image.open(file_name)
