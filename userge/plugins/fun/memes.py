@@ -23,7 +23,7 @@ from cowpy import cow
 from userge import userge, Message
 
 
-@userge.on_cmd(r"(?:Kek|:/)$",
+@userge.on_cmd(r"(?::/)$",
                about={'header': "Check yourself, hint: `:/`"}, name='Kek',
                trigger='', allow_via_bot=False)
 async def kek_(message: Message):
@@ -34,7 +34,7 @@ async def kek_(message: Message):
         await message.edit(":" + kek[i % 2])
 
 
-@userge.on_cmd(r"(?:Lol|-_-)$",
+@userge.on_cmd(r"(?:-_-)$",
                about={'header': "Check yourself, hint: `-_-`"}, name='Lol',
                trigger='', allow_via_bot=False)
 async def lol_(message: Message):
@@ -47,7 +47,7 @@ async def lol_(message: Message):
         await message.edit(lol, parse_mode="html")
 
 
-@userge.on_cmd(r"(?:Fun|;_;)$",
+@userge.on_cmd(r"(?:;_;)$",
                about={'header': "Check yourself, hint: `;_;`"}, name="Fun",
                trigger='', allow_via_bot=False)
 async def fun_(message: Message):
