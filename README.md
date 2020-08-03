@@ -101,7 +101,7 @@ async def testing(message: Message):
 
 ## Requirements 
 
-* Python 3.7 or Higher 
+* Python 3.8 or Higher 👻
 * Telegram [API Keys](https://my.telegram.org/apps)
 * Google Drive [API Keys](https://console.developers.google.com/)
 * MongoDB [Database URL](https://cloud.mongodb.com/)
