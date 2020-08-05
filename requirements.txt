@@ -1,4 +1,4 @@
-git+https://github.com/pyrogram/pyrogram/archive/test.zip
+https://github.com/pyrogram/pyrogram/archive/test.zip
 aiofiles
 aiohttp
 bs4
