@@ -1,8 +1,8 @@
 import os
 from .config import Config
 #from .core from userge
-from .utils/tools import take_screen_shot, runcmd
-from .utils/progress import progress
+from .utils.tools import take_screen_shot, runcmd
+from .utils.progress import progress
 import re
 
 # For Downloading any Media and Converting to Image.
