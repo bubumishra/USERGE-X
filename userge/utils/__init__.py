@@ -15,3 +15,4 @@ from .tools import (take_screen_shot,  # noqa
                     humanbytes,
                     time_formatter,
                     get_import_path)
+from .functions import (media_to_image, deEmojify)                    
