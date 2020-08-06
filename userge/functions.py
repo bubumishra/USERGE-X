@@ -1,11 +1,11 @@
 import os
-from userge import userge, Message, Config
+from userge import userge, Config
 from userge.utils import progress, take_screen_shot, runcmd
 import re
 
 # For Downloading any Media and Converting to Image.
 # RETURNS an "Image"
-async def media_to_image(message: Message):   
+async def media_to_image(message):   
     if not os.path.isdir(Config.DOWN_PATH):
         os.makedirs(Config.DOWN_PATH)
     await message.edit("He he, let me use my skills")
