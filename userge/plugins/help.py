@@ -258,14 +258,14 @@ if Config.BOT_TOKEN and Config.OWNER_ID:
         text = (f"**(`{len(plugins)}`) Plugin(s) Under : "
                 f"`{_CATEGORY.get(pos_list[1], '📁')} {pos_list[1]}`  Category**")
         buttons = parse_buttons(0, '|'.join(pos_list[:2]),
-                                lambda x: f"🗃 {x}",
+                                lambda x: f"🔹 {x}",
                                 plugins)
         return text, buttons
 
     def plugin_data(cur_pos: str, p_num: int = 0):
         pos_list = cur_pos.split('|')
         plg = userge.manager.plugins[pos_list[2]]
-        text = f"""🗃 **--Plugin Status--** 🗃
+        text = f"""🔹 **--Plugin Status--** 🔹
 
 🎭 **Category** : `{pos_list[1]}`
 🔖 **Name** : `{plg.name}`
