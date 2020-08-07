@@ -1,12 +1,11 @@
 import os
 from .config import Config
-#from .core from userge
 from .utils.tools import take_screen_shot, runcmd
 from .utils.progress import progress
 import re
 
-# For Downloading any Media and Converting to Image.
-# RETURNS an "Image"
+# For Downloading & Checking Media then Converting to Image.
+# RETURNS an "Image".
 async def media_to_image(message):
     replied = message.reply_to_message
     if not (replied.photo or replied.sticker or replied.animation or replied.video):
@@ -68,6 +67,7 @@ EMOJI_PATTERN = re.compile(
     "\U00002702-\U000027B0"  # Dingbats 
     "]+")
 
+# RETURNS a "string" so don't use with await
 def deEmojify(inputString: str) -> str:
     """Remove emojis and other non-safe characters from string"""
     return re.sub(EMOJI_PATTERN, '', inputString)
