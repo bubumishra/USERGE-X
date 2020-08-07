@@ -212,7 +212,7 @@ if Config.BOT_TOKEN and Config.OWNER_ID:
                       cur_pos: str,
                       func: Callable[[str], str],
                       data: Union[List[str], Dict[str, Any]],
-                      rows: int = 4):
+                      rows: int = 5):
         buttons = [InlineKeyboardButton(
             func(x), callback_data=f"enter({cur_pos}|{x})".encode()) for x in sorted(data)]
         pairs = list(map(list, zip(buttons[::2], buttons[1::2])))
@@ -270,7 +270,7 @@ if Config.BOT_TOKEN and Config.OWNER_ID:
 🎭 **Category** : `{pos_list[1]}`
 🔖 **Name** : `{plg.name}`
 📝 **Doc** : `{plg.doc}`
-• **Commands** : `{len(plg.commands)}`
+◾️ **Commands** : `{len(plg.commands)}`
 ⚖ **Filters** : `{len(plg.filters)}`
 ✅ **Loaded** : `{plg.is_loaded}`
 ➕ **Enabled** : `{plg.is_enabled}`
@@ -342,7 +342,7 @@ if Config.BOT_TOKEN and Config.OWNER_ID:
                 ),
                 url="https://github.com/code-rgb/USERGE-X",
                 description="Setup Your Own",
-                thumb_url="https://i.imgur.com/Xy89sru.png",
+                thumb_url="https://i.imgur.com/1xsOo9o.png",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -368,7 +368,7 @@ if Config.BOT_TOKEN and Config.OWNER_ID:
                     ),
                     url="https://github.com/code-rgb/USERGE-X",
                     description="Userge-X Main Menu",
-                    thumb_url="https://i.imgur.com/Xy89sru.png",
+                    thumb_url="https://i.imgur.com/1xsOo9o.png",
                     reply_markup=InlineKeyboardMarkup(main_menu_buttons())
                 )
             )
