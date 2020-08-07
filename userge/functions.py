@@ -9,9 +9,9 @@ import re
 # RETURNS an "Image"
 async def media_to_image(message):
     replied = message.reply_to_message
-    #if not (replied.photo or replied.sticker or replied.animation or replied.video):
-        #await message.err("<code>Media Type Is Invalid ! See HELP.</code>")
-        #return
+    if not (replied.photo or replied.sticker or replied.animation or replied.video):
+        await message.err("<code>Media Type Is Invalid ! See HELP.</code>")
+        return
     if not os.path.isdir(Config.DOWN_PATH):
         os.makedirs(Config.DOWN_PATH)
     await message.edit("Ah Shit, Here We Go Again...")
