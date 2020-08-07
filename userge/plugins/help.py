@@ -212,7 +212,7 @@ if Config.BOT_TOKEN and Config.OWNER_ID:
                       cur_pos: str,
                       func: Callable[[str], str],
                       data: Union[List[str], Dict[str, Any]],
-                      rows: int = 3):
+                      rows: int = 4):
         buttons = [InlineKeyboardButton(
             func(x), callback_data=f"enter({cur_pos}|{x})".encode()) for x in sorted(data)]
         pairs = list(map(list, zip(buttons[::2], buttons[1::2])))
