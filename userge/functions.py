@@ -7,7 +7,8 @@ import re
 
 # For Downloading any Media and Converting to Image.
 # RETURNS an "Image"
-async def media_to_image(message):   
+async def media_to_image(message):
+    replied = message.reply_to_message
     if not os.path.isdir(Config.DOWN_PATH):
         os.makedirs(Config.DOWN_PATH)
     await message.edit("He he, let me use my skills")
